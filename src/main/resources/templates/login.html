@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>로그인</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="login">
+
+        <h2 class="font-weight-medium">통합로그인</h2>
+        <input type="text" id="id" placeholder="아이디">
+        <input type="text" id="pw" placeholder="패스워드">
+        <a href="javascript:void(0)">아이디 · 비밀번호 찾기</a>
+        <a href="javascript:void(0)">회원가입</a>
+        <button id="login_button" type="button" onclick="submit()">로그인</button>
+</div>
+</body>
+<script>
+    function submit(){
+        const userid = $("#id").val();
+        const password = $("#pw").val();
+        const formdata = {userid:userid,password:password}
+        $.ajax({
+            url: '/api/login',
+            type: 'POST',
+            data: JSON.stringify(formdata),
+            contentType : 'application/json; charset=utf-8',
+            dataType: 'html',
+            success : function(data,text,request) {
+
+                alert(request.getResponseHeader('X-AUTH-TOKEN'));
+                //location.replace("/home");
+
+            },
+            error: function(err){
+                alert(err);
+            }
+        });
+
+    }
+</script>
+</html>
