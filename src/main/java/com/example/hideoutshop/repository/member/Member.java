@@ -4,6 +4,8 @@ package com.example.hideoutshop.repository.member;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -22,5 +24,19 @@ public class Member {
     @Column(name = "user_password")
     private String password;
 
+    @Column(name = "user_tel")
+    private String tel;
+
+    @Column(name = "user_address")
+    private String address;
+
+    @Column(name = "user_loginstate")
+    private String loginstate;
+
+    @Column(name = "user_role")
+    private String role;
+
+    @Column(name = "user_joindate")
+    private LocalDateTime joindate;
 
 }

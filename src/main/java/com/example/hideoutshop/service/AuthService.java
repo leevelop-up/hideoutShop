@@ -18,6 +18,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -34,23 +36,34 @@ public class AuthService {
         String email = signUpRequest.getEmail();
         String userid = signUpRequest.getUserid();
         String password = signUpRequest.getPassword();
-
+        LocalDateTime now = LocalDateTime.now();
+        if(email == "" || userid == "" || password == ""){
+            return false;
+        }
         if(memberRepository.existsByEmail(email)){
             return false;
-
         }
 
-//        Member memberFound = memberRepository.findByUserId(userid)
-//                .orElseGet(()-> memberRepository.save(Member.builder().userId(userid).build()));
-
+        validateDuplicateMember(userid);
         Member member = Member.builder()
                 .email(email)
                 .userId(userid)
                 .password(passwordEncoder.encode(password))
+                .role("customer")
+                .joindate(now)
                 .build();
         memberRepository.save(member);
         return true;
     }
+
+    private void validateDuplicateMember(String userid) {
+        memberRepository.findByUserId(userid)
+                .ifPresent(m -> {
+                    throw new IllegalStateException("이미 값이 있습니다");
+                });
+    }
+
+
 
     public String login(Login loginRequest) {
         String userid = loginRequest.getUserid();
@@ -64,7 +77,9 @@ public class AuthService {
 
             Member member = memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
-            return jwtTokenProvider.createToken(userid,"role");
+
+            return jwtTokenProvider.createToken(member.getUserId(),member.getRole());
+
         }catch (Exception e){
             e.printStackTrace();
             throw new NotAcceptException("로그인에 실패했습니다.");

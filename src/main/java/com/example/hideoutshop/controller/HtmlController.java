@@ -21,5 +21,16 @@ public class HtmlController {
         return "login";
     }
 
+    @ApiOperation("로그인")
+    @GetMapping("/signin")
+    public String sign(){
+        return "signin";
+    }
+
+    @ApiOperation("상품 입려")
+    @GetMapping("/setting")
+    public String setting(){
+        return "setting";
+    }
 
 }
