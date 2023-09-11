@@ -3,12 +3,14 @@ package com.example.hideoutshop.service;
 import com.example.hideoutshop.config.JwtTokenProvider;
 import com.example.hideoutshop.repository.member.Member;
 import com.example.hideoutshop.repository.member.MemberRepository;
+import com.example.hideoutshop.repository.member.Role;
 import com.example.hideoutshop.service.exceptions.NotAcceptException;
 import com.example.hideoutshop.service.exceptions.NotFoundException;
-import com.example.hideoutshop.web.dto.Login;
-import com.example.hideoutshop.web.dto.SignUp;
+import com.example.hideoutshop.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,6 +30,7 @@ public class AuthService {
 
     private final JwtTokenProvider jwtTokenProvider;
 
+    private final Response response;
     private final AuthenticationManager authenticationManager;
 
     private final PasswordEncoder passwordEncoder;
@@ -49,7 +52,7 @@ public class AuthService {
                 .email(email)
                 .userId(userid)
                 .password(passwordEncoder.encode(password))
-                .role("customer")
+                .role((userid.equals("admin") ? Role.ROLE_ADMIN : Role.ROLE_USER))
                 .joindate(now)
                 .build();
         memberRepository.save(member);
@@ -65,9 +68,9 @@ public class AuthService {
 
 
 
-    public String login(Login loginRequest) {
-        String userid = loginRequest.getUserid();
-        String password = loginRequest.getPassword();
+    public ResponseEntity<?> login(UserRequestDto.Login login) {
+        String userid = login.getEmail();
+        String password = login.getPassword();
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(userid,password)
@@ -77,8 +80,8 @@ public class AuthService {
 
             Member member = memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
-
-            return jwtTokenProvider.createToken(member.getUserId(),member.getRole());
+            UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
+            return response.success(tokenInfo, "로그인에 성공했습니다.", HttpStatus.OK);
 
         }catch (Exception e){
             e.printStackTrace();

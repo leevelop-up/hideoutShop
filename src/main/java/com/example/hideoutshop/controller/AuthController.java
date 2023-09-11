@@ -1,16 +1,14 @@
 package com.example.hideoutshop.controller;
 
 import com.example.hideoutshop.service.AuthService;
-import com.example.hideoutshop.web.dto.Login;
 import com.example.hideoutshop.web.dto.SignUp;
+import com.example.hideoutshop.web.dto.UserRequestDto;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
@@ -29,11 +27,12 @@ public class AuthController {
 
     @ApiOperation("로그인")
     @PostMapping("/login")
-    public String login(@RequestBody Login loginRequest, HttpServletResponse httpServletResponse){
-        String token = authService.login(loginRequest);
-        httpServletResponse.setHeader("X-AUTH-TOKEN",token);
+    public ResponseEntity<?> login(UserRequestDto.Login login, HttpServletResponse httpServletResponse){
 
-        return "로그인이 성공하였습니다.";
+        //String token = authService.login(loginRequest);
+        //httpServletResponse.setHeader("X-AUTH-TOKEN",token);
+
+        return authService.login(login);
     }
 
 

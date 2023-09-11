@@ -59,6 +59,10 @@ dependencies {
 
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
+    //redis
+    implementation 'org.springframework.session:spring-session-data-redis:2.7.0'
+
+
 }
 
 tasks.named('test') {

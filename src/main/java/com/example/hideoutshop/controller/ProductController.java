@@ -23,7 +23,6 @@ public class ProductController {
     @PostMapping(value = "/api/product/setting")
     public String setting(@ModelAttribute Product product, MultipartFile file) throws Exception {
         Boolean isSuccess = productService.save(product, file);
-
         return isSuccess ? "상품이 등록되었습니다." : "등록 실패하였습니다.";
     }
 

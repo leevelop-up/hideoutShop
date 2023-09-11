@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hideOutShop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hideOutShop.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hideOutShop.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hideOutShop.test.iml" />
     </modules>
   </component>
 </project>

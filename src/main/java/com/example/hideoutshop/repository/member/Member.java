@@ -33,10 +33,11 @@ public class Member {
     @Column(name = "user_loginstate")
     private String loginstate;
 
-    @Column(name = "user_role")
-    private String role;
-
     @Column(name = "user_joindate")
     private LocalDateTime joindate;
+
+    @Column(name = "user_role", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }
