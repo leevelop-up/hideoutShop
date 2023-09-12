@@ -23,7 +23,7 @@ $(document).ready(function() {
 
         let listHtml = "";
         for (let i = 0; i < data.length; i++) {
-            listHtml +="<div class=\"card\" style=\"width: 18rem;\">";
+            listHtml +="<div class=\"card\" style=\"width: 18rem;\" onclick=\"detail("+data[i].productNo+")\">";
             listHtml +="<img class=\"card-img-top\" src="+"."+data[i].productPath+" alt=\"Card image cap\">";
             listHtml +="<div class=\"card-body\">";
             listHtml +="<p class=\"card-text\">"+data[i].productName+"</p>";
@@ -38,4 +38,8 @@ $(document).ready(function() {
 function logout(){
     localStorage.removeItem('accesstoken');
     location.replace("/home");
+}
+
+function detail(no){
+    location.replace("/detail/"+no);
 }

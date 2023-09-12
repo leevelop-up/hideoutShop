@@ -1,6 +1,7 @@
 package com.example.hideoutshop.repository.member;
 
 
+import io.swagger.models.auth.In;
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,7 +16,11 @@ import java.util.Date;
 @Entity
 @Table(name = "member")
 public class Member {
-    @Id @Column(name = "user_id")
+
+    @Id @Column(name = "user_no")
+    private Integer userNo;
+
+    @Column(name = "user_id")
     private String userId;
 
     @Column(name = "user_email")

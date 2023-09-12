@@ -27,3 +27,15 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+- homebrew로 서비스 시작
+  $brew services start redis
+
+- 서비스 중단
+  $brew services stop redis
+
+- 서비스 재기동
+  $brew services restart redis
+
+- redis 클라이언트로 접속
+  $redis-cli
+

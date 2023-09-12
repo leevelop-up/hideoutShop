@@ -15,18 +15,35 @@ import javax.persistence.*;
 @Table(name = "product")
 public class Product {
 
+
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "pd_no")
     private Integer productNo;
 
-    @Column(name = "product_name")
+    @Column(name = "pd_name")
     private String productName;
 
-    @Column(name = "product_content")
+    @Column(name = "pd_content")
     private String productContent;
+    @Column(name = "pd_bigdiv")
+    private Integer productBigDivNo;
 
-    @Column(name = "product_img")
+    @Column(name = "pd_mediumdiv")
+    private Integer productMediumDivNo;
+
+    @Column(name = "pd_smalldiv")
+    private Integer productSmallDivNo;
+
+    @Column(name = "pd_price")
+    private Integer productPrice;
+
+    @Column(name = "pd_option")
+    private Character ProductOptionShow;
+
+    @Column(name = "pd_img")
     private String productImg;
 
-    @Column(name = "product_path")
+    @Column(name = "pd_path")
     private String productPath;
 }

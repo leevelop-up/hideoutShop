@@ -9,6 +9,7 @@ import com.example.hideoutshop.service.exceptions.NotFoundException;
 import com.example.hideoutshop.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Transactional
@@ -34,6 +36,8 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
 
     private final PasswordEncoder passwordEncoder;
+
+    private final RedisTemplate redisTemplate;
 
     public boolean signUp(SignUp signUpRequest) {
         String email = signUpRequest.getEmail();
@@ -69,8 +73,9 @@ public class AuthService {
 
 
     public ResponseEntity<?> login(UserRequestDto.Login login) {
-        String userid = login.getEmail();
+        String userid = login.getUserid();
         String password = login.getPassword();
+
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(userid,password)
@@ -80,12 +85,30 @@ public class AuthService {
 
             Member member = memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
+
             UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
+
+            redisTemplate.opsForValue()
+                    .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);
             return response.success(tokenInfo, "로그인에 성공했습니다.", HttpStatus.OK);
 
         }catch (Exception e){
             e.printStackTrace();
             throw new NotAcceptException("로그인에 실패했습니다.");
         }
+    }
+
+    public ResponseEntity<?> signOut(Integer id) {
+
+        try{
+            memberRepository.findById(id).orElseThrow(()-> new NotFoundException("해당 값이 없습니다."));
+            memberRepository.deleteById(id);
+
+            return response.success("삭제처리 되었습니다.");
+        }catch (Exception e){
+            throw new NotAcceptException("삭제 실패했습니다.");
+
+        }
+
     }
 } // End class

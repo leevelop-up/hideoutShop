@@ -1,5 +1,6 @@
 package com.example.hideoutshop.controller;
 
+import com.example.hideoutshop.repository.member.Member;
 import com.example.hideoutshop.service.AuthService;
 import com.example.hideoutshop.web.dto.SignUp;
 import com.example.hideoutshop.web.dto.UserRequestDto;
@@ -7,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -27,13 +29,22 @@ public class AuthController {
 
     @ApiOperation("로그인")
     @PostMapping("/login")
-    public ResponseEntity<?> login(UserRequestDto.Login login, HttpServletResponse httpServletResponse){
+    public ResponseEntity<?> login(@RequestBody UserRequestDto.Login login, HttpServletResponse httpServletResponse){
 
         //String token = authService.login(loginRequest);
         //httpServletResponse.setHeader("X-AUTH-TOKEN",token);
 
         return authService.login(login);
     }
+
+    @ApiOperation("회원 탈퇴")
+    @PostMapping("signout/{id}")
+    public ResponseEntity<?> signOut(@PathVariable Integer id){
+
+        return authService.signOut(id);
+    }
+
+
 
 
 

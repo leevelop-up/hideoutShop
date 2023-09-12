@@ -33,4 +33,10 @@ public class HtmlController {
         return "setting";
     }
 
+    @ApiOperation("상품 입려")
+    @GetMapping("/detail")
+    public String detail(){
+        return "detail";
+    }
+
 }
