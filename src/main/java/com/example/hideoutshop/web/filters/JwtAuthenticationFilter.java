@@ -18,7 +18,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtTokenProvider jwtTokenProvider;
-    private static final String AUTHORIZATION_HEADER = "Authorization";
+    private static final String AUTHORIZATION_HEADER = "ACCESS-TOKEN";
     private static final String BEARER_TYPE = "Bearer";
 
     //private final TokenRepository tokenRepository;
@@ -27,6 +27,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         //String jwtToken = jwtTokenProvider.resolveToken(request);
+        //logger.info(request.getRes);
         String token = resolveToken(request);
         // 유효한 토큰일 시 인증
         if (token != null && jwtTokenProvider.validateToken(token)) {
@@ -38,7 +39,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private String resolveToken(HttpServletRequest request) {
-        String bearerToken = request.getHeader(AUTHORIZATION_HEADER);
+        String bearerToken = request.getHeader("ACCESS-TOKEN");
+        logger.info(bearerToken);
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith(BEARER_TYPE)) {
             return bearerToken.substring(7);
         }

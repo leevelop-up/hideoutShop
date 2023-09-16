@@ -2,6 +2,7 @@ package com.example.hideoutshop.controller;
 
 import com.example.hideoutshop.repository.member.Member;
 import com.example.hideoutshop.service.AuthService;
+import com.example.hideoutshop.web.dto.Response;
 import com.example.hideoutshop.web.dto.SignUp;
 import com.example.hideoutshop.web.dto.UserRequestDto;
 import io.swagger.annotations.ApiOperation;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 public class AuthController {
     private final AuthService authService;
-
+    private final Response response;
     @ApiOperation("이메일과 패스워드로 회원가입 API")
     @PostMapping(value = "/signup")
     public String register(@RequestBody SignUp SignUpRequest){
@@ -33,8 +34,7 @@ public class AuthController {
 
         //String token = authService.login(loginRequest);
         //httpServletResponse.setHeader("X-AUTH-TOKEN",token);
-
-        return authService.login(login);
+        return authService.login(login,httpServletResponse);
     }
 
     @ApiOperation("회원 탈퇴")

@@ -21,6 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
@@ -38,6 +39,9 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
 
     private final RedisTemplate redisTemplate;
+
+    private static final String BEARER_TYPE = "Bearer";
+
 
     public boolean signUp(SignUp signUpRequest) {
         String email = signUpRequest.getEmail();
@@ -72,7 +76,7 @@ public class AuthService {
 
 
 
-    public ResponseEntity<?> login(UserRequestDto.Login login) {
+    public ResponseEntity<?> login(UserRequestDto.Login login, HttpServletResponse httpServletResponse) {
         String userid = login.getUserid();
         String password = login.getPassword();
 
@@ -87,6 +91,7 @@ public class AuthService {
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
 
             UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
+            httpServletResponse.setHeader("ACCESS-TOKEN",BEARER_TYPE+tokenInfo.getAccessToken());
 
             redisTemplate.opsForValue()
                     .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);

@@ -11,6 +11,9 @@ $(document).ready(function() {
             "</li>"+
             "<li class=\"nav-item\">" +
             "<a class=\"nav-link\" href=\"/updatesetting\">제품수정</a>" +
+            "</li>"+
+            "<li class=\"nav-item\">" +
+            "<a class=\"nav-link\" href=\"/mypage\">마이페이지</a>" +
             "</li>"
         );
     }
@@ -41,5 +44,5 @@ function logout(){
 }
 
 function detail(no){
-    location.replace("/detail/"+no);
+    location.replace("/detail");
 }
