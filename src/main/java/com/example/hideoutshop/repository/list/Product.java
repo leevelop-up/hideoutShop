@@ -39,11 +39,14 @@ public class Product {
     private Integer productPrice;
 
     @Column(name = "pd_option")
-    private Character ProductOptionShow;
+    private Character productOptionShow;
 
     @Column(name = "pd_img")
     private String productImg;
 
     @Column(name = "pd_path")
     private String productPath;
+
+    @Column(name = "pd_writer")
+    private String productWriter;
 }

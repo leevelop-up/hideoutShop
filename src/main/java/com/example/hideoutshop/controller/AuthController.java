@@ -12,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/api")
@@ -34,6 +36,7 @@ public class AuthController {
 
         //String token = authService.login(loginRequest);
         //httpServletResponse.setHeader("X-AUTH-TOKEN",token);
+        System.out.println(login.getUserid());
         return authService.login(login,httpServletResponse);
     }
 
@@ -44,9 +47,17 @@ public class AuthController {
         return authService.signOut(id);
     }
 
+    @ApiOperation("헤더 유지")
+    @GetMapping("/header")
+    public void testRedirect(HttpServletResponse response) throws IOException {
+        response.sendRedirect("/api/user");
+    }
 
 
-
+    @GetMapping("/user")
+    public String getMyUserInfo(HttpServletRequest request) {
+        return "header";
+    }
 
 
 } // end class

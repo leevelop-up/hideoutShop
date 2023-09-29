@@ -44,6 +44,8 @@
         const userid = $("#id").val();
         const password = $("#pw").val();
         const formdata = {userid:userid,password:password}
+
+        // 요청 보내기
         $.ajax({
             url: '/api/login',
             type: 'POST',
@@ -51,15 +53,16 @@
             contentType : 'application/json; charset=utf-8',
             dataType: 'html',
             success : function(data,text,request) {
-                console.log(request);
-                localStorage.setItem("accesstoken",request.getResponseHeader('AccessToken'))
+
+                // localStorage에 토큰 저장
+                localStorage.setItem("Authorization", request.getResponseHeader('Authorization'));
+
                 location.replace("/home");
             },
             error: function(request, textStatus, errorThrown){
                 alert("로그인에 실패했습니다.");
             }
         });
-
     }
 </script>
 </html>

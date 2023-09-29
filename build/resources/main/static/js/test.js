@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //로그인 상태 확인
-    var accessToken = localStorage.getItem("accesstoken");
+    var accessToken = localStorage.getItem("Authorization");
     if(accessToken){
         $(".navbar-nav").html(
             "<li class=\"nav-item active\">" +
@@ -10,14 +10,13 @@ $(document).ready(function() {
             "<a class=\"nav-link\" href=\"/setting\">제품등록</a>" +
             "</li>"+
             "<li class=\"nav-item\">" +
-            "<a class=\"nav-link\" href=\"/updatesetting\">제품수정</a>" +
+            "<a class=\"nav-link\" href=\"/mylist\">제품수정</a>" +
             "</li>"+
             "<li class=\"nav-item\">" +
             "<a class=\"nav-link\" href=\"/mypage\">마이페이지</a>" +
             "</li>"
         );
     }
-
 
 
     //등록된 제품 가져오기
@@ -36,10 +35,26 @@ $(document).ready(function() {
         }
         $("#body").append(listHtml);
     });
+    getUserMe()
 });
 
+function getUserMe(){
+    var settings = {
+        "url": "/api/header",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+            "Authorization": localStorage.getItem("Authorization")
+        },
+    };
+
+    $.ajax(settings).done(function (response) { //성공하면
+        console.log(response);
+
+    });
+}
 function logout(){
-    localStorage.removeItem('accesstoken');
+    localStorage.removeItem('Authorization');
     location.replace("/home");
 }
 

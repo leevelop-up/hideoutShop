@@ -1,7 +1,9 @@
 package com.example.hideoutshop.web.filters;
 
 import com.example.hideoutshop.config.JwtTokenProvider;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,13 +14,15 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Enumeration;
 
 
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtTokenProvider jwtTokenProvider;
-    private static final String AUTHORIZATION_HEADER = "ACCESS-TOKEN";
+    private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String BEARER_TYPE = "Bearer";
 
     //private final TokenRepository tokenRepository;
@@ -27,7 +31,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         //String jwtToken = jwtTokenProvider.resolveToken(request);
-        //logger.info(request.getRes);
+        Enumeration<String> headerNames = request.getHeaderNames();
+        headerNames.asIterator().forEachRemaining(headerName -> {
+            //System.out.println(headerName + ": " + request.getHeader(headerName));
+            //logger.info(request.getHeader(headerName));
+        });
+
         String token = resolveToken(request);
         // 유효한 토큰일 시 인증
         if (token != null && jwtTokenProvider.validateToken(token)) {
@@ -39,7 +48,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private String resolveToken(HttpServletRequest request) {
-        String bearerToken = request.getHeader("ACCESS-TOKEN");
+        String bearerToken = request.getHeader(AUTHORIZATION_HEADER);
         logger.info(bearerToken);
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith(BEARER_TYPE)) {
             return bearerToken.substring(7);

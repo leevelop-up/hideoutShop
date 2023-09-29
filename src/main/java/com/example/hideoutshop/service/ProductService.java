@@ -2,7 +2,9 @@ package com.example.hideoutshop.service;
 
 import com.example.hideoutshop.repository.list.Product;
 import com.example.hideoutshop.repository.list.ProductRepository;
+import com.example.hideoutshop.repository.member.Member;
 import com.example.hideoutshop.service.exceptions.NotFoundException;
+import com.example.hideoutshop.web.dto.SignUp;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,7 +22,7 @@ import java.util.UUID;
 public class ProductService {
 
     private final ProductRepository productRepository;
-    public boolean save(Product product, MultipartFile file) throws Exception{
+    public boolean save(Product product, MultipartFile file ,String userid) throws Exception{
 
         String path = System.getProperty("user.dir")+"/src/main/resources/static/files";
 
@@ -37,8 +39,12 @@ public class ProductService {
         Product productInfo = Product.builder()
                 .productName(product.getProductName())
                 .productContent(product.getProductContent())
+                .productPrice(product.getProductPrice())
+                .productOptionShow(product.getProductOptionShow())
                 .productImg(filename)
+                .productWriter(userid)
                 .productPath("/files/"+filename)
+                .productWriter("writer")
                 .build();
 
         productRepository.save(productInfo);
@@ -46,6 +52,8 @@ public class ProductService {
     }
 
     public List<Product> Boardlist(){
+
+
         return productRepository.findAll();
     }
 

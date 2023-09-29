@@ -10,6 +10,7 @@ import com.example.hideoutshop.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -40,7 +41,7 @@ public class AuthService {
 
     private final RedisTemplate redisTemplate;
 
-    private static final String BEARER_TYPE = "Bearer";
+    private static final String BEARER_TYPE = "Bearer ";
 
 
     public boolean signUp(SignUp signUpRequest) {
@@ -85,13 +86,14 @@ public class AuthService {
                     new UsernamePasswordAuthenticationToken(userid,password)
 
             );
+
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            Member member = memberRepository.findByUserId(userid)
+            memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
 
             UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
-            httpServletResponse.setHeader("ACCESS-TOKEN",BEARER_TYPE+tokenInfo.getAccessToken());
+            httpServletResponse.addHeader("Authorization","Bearer "+tokenInfo.getAccessToken());
 
             redisTemplate.opsForValue()
                     .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);

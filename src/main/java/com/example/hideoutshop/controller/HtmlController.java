@@ -39,4 +39,10 @@ public class HtmlController {
         return "detail";
     }
 
+    @ApiOperation("내 상품 수정")
+    @GetMapping("/mylist")
+    public String mylist(){
+        return "mylist";
+    }
+
 }

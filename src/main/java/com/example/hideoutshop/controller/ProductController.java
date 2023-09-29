@@ -1,10 +1,15 @@
 package com.example.hideoutshop.controller;
 
+import com.example.hideoutshop.config.JwtTokenProvider;
 import com.example.hideoutshop.repository.list.Product;
 import com.example.hideoutshop.service.ProductService;
+import io.jsonwebtoken.Jwt;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,12 +22,24 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
+    private final JwtTokenProvider jwtTokenProvider;
+    private final UserDetailsService userDetailsService;
 
     @ApiOperation("상품등록")
-
     @PostMapping(value = "/api/product/setting")
-    public String setting(@ModelAttribute Product product, MultipartFile file) throws Exception {
-        Boolean isSuccess = productService.save(product, file);
+    public String setting(@ModelAttribute Product product, MultipartFile file, @RequestHeader("Authorization") String accessToken) throws Exception {
+        String userid = null;
+        Boolean isSuccess = false;
+        if (accessToken.startsWith("Bearer")) {
+            String Token = accessToken.replace("Bearer", " ");
+            userid = jwtTokenProvider.getUserId(Token);
+            System.out.println("아이디는 !!" + userid);
+             isSuccess = productService.save(product, file, userid);
+        }else{
+             isSuccess = false;
+        }
+
+
         return isSuccess ? "상품이 등록되었습니다." : "등록 실패하였습니다.";
     }
 
@@ -43,6 +60,7 @@ public class ProductController {
 
         return deleteBoard;
     }
+
 
 
 }

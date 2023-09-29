@@ -1,17 +1,126 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="/js/test.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>상품 입력</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/form-validation.css" rel="stylesheet">
 </head>
-<body>
-<form action="/api/product/setting" method="post" enctype="multipart/form-data">
-    <input type="text" id="productName" name="productName" value="">
-    <input type="text" id="productContent" name="productContent" value="">
-    <input type="file" id="productImg" name="file">
-    <button type="submit">입력</button>
 
+<body class="bg-light">
+<form action="/api/product/setting" method="post" enctype="multipart/form-data">
+<div class="container">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2>상품 입력</h2>
+        <p class="lead"></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">개인정보 입력</h4>
+            <div class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="productContent">제품 명</label>
+                    <div class="input-group">
+                        <input type="text" id="productName" name="productName" value="">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="productContent">제품 설명</label>
+                    <div class="input-group">
+                        <input type="text" id="productContent" name="productContent" value="">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice">가격</label>
+                    <div class="input-group">
+                        <input type="text" id="productPrice" name="productPrice" value="">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="ProductOptionShow">옵션 유무</label>
+                    <div class="input-group">
+                        <select name="ProductOptionShow" id="ProductOptionShow">
+                            <option value="N">없음</option>
+                            <option value="Y">있음</option>
+                        </select>
+
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="productImg">첨부파일</label>
+                    <input type="file" id="productImg" name="file">
+                    <div class="invalid-feedback">
+                        Please enter your shipping address.
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <button type="button" onclick="submit()">입력</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>
 </form>
+
 </body>
 </html>
+
+<script>
+    function submit(){
+        const userid = $("#id").val();
+        const password = $("#pw").val();
+        const formdata = {userid:userid,password:password}
+
+        // 요청 보내기
+        $.ajax({
+            url: '/api/product/setting',
+            type: 'POST',
+            data: JSON.stringify(formdata),
+            headers: {
+                "Authorization": localStorage.getItem("Authorization"),
+                "Another-Header": "AnotherValue",
+                "text": "your_text_value"  // Request Header에 "text" 값 추가
+            },
+            contentType : 'application/json; charset=utf-8',
+            dataType: 'html',
+            success : function(data,text,request) {
+
+                location.replace("/home");
+            },
+            error: function(request, textStatus, errorThrown){
+                alert("로그인에 실패했습니다.");
+            }
+        });
+    }
+</script>
