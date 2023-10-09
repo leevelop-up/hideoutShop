@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-light">
-<form action="/api/product/setting" method="post" enctype="multipart/form-data">
+<form id="productFoem" enctype="multipart/form-data">
 <div class="container">
     <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -77,7 +77,7 @@
                 </div>
 
                 <hr class="mb-4">
-                <button type="button" onclick="submit()">입력</button>
+                <button type="button" onclick="inputProduct()">입력</button>
             </div>
         </div>
     </div>
@@ -97,29 +97,35 @@
 </html>
 
 <script>
-    function submit(){
-        const userid = $("#id").val();
-        const password = $("#pw").val();
-        const formdata = {userid:userid,password:password}
+    function inputProduct(){
+        const productName = $("#productName").val();
+        const productContent = $("#productContent").val();
+        const productPrice = $("#productPrice").val();
+        const ProductOptionShow = $("#ProductOptionShow").val();
+        const formdata = new FormData();
 
+        // 텍스트 데이터 추가
+        formdata.append("productName", productName);
+        formdata.append("productContent", productContent);
+        formdata.append("productPrice", productPrice);
+        formdata.append("ProductOptionShow", ProductOptionShow);
+        const fileInput = document.getElementById("productImg"); // 파일 입력 필드의 ID
+        formdata.append("file", fileInput.files[0]); // 파일 입력 필드에서 선택한 파일
         // 요청 보내기
         $.ajax({
             url: '/api/product/setting',
             type: 'POST',
-            data: JSON.stringify(formdata),
+            data: formdata,
             headers: {
-                "Authorization": localStorage.getItem("Authorization"),
-                "Another-Header": "AnotherValue",
-                "text": "your_text_value"  // Request Header에 "text" 값 추가
+                "Authorization": localStorage.getItem("Authorization")
             },
-            contentType : 'application/json; charset=utf-8',
-            dataType: 'html',
+            contentType : false,
+            processData: false,
             success : function(data,text,request) {
-
                 location.replace("/home");
             },
             error: function(request, textStatus, errorThrown){
-                alert("로그인에 실패했습니다.");
+                alert("등록실패 하였습니다.");
             }
         });
     }

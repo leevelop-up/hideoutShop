@@ -1,10 +1,11 @@
 package com.example.hideoutshop.service;
 
-import com.example.hideoutshop.repository.list.Product;
-import com.example.hideoutshop.repository.list.ProductRepository;
-import com.example.hideoutshop.repository.member.Member;
+import com.example.hideoutshop.repository.Option.OptionRepository;
+import com.example.hideoutshop.repository.Option.Options;
+import com.example.hideoutshop.repository.Product.Product;
+import com.example.hideoutshop.repository.Product.ProductRepository;
 import com.example.hideoutshop.service.exceptions.NotFoundException;
-import com.example.hideoutshop.web.dto.SignUp;
+import com.example.hideoutshop.web.dto.ProductDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,19 +23,25 @@ import java.util.UUID;
 public class ProductService {
 
     private final ProductRepository productRepository;
-    public boolean save(Product product, MultipartFile file ,String userid) throws Exception{
+    private final OptionRepository optionRepository;
+    public boolean save(ProductDTO product, Options option, MultipartFile productImg , String userid) throws Exception{
 
+        if(userid == ""){
+            return false;
+        }
         String path = System.getProperty("user.dir")+"/src/main/resources/static/files";
 
         UUID uuid = UUID.randomUUID();
-        String filename = uuid+"_"+file.getOriginalFilename();
+        String filename = uuid+"_"+productImg.getOriginalFilename();
         File saveFile = new File(path,filename);
-        file.transferTo(saveFile);
+        productImg.transferTo(saveFile);
 
         //파일이 없으면 입력 실패
-        if(file.isEmpty()){
+        if(productImg.isEmpty()){
             return false;
         }
+
+
 
         Product productInfo = Product.builder()
                 .productName(product.getProductName())
@@ -47,12 +54,19 @@ public class ProductService {
                 .productWriter("writer")
                 .build();
 
-        productRepository.save(productInfo);
+       Product productDTO =  productRepository.save(productInfo);
+
+        Options optionInfo = Options.builder()
+                .OptionPrice(10000)
+                .OptionName("노랑")
+                .ProductNo(productDTO.getProductNo())
+                .build();
+        optionRepository.save(optionInfo);
+
         return true;
     }
 
     public List<Product> Boardlist(){
-
 
         return productRepository.findAll();
     }

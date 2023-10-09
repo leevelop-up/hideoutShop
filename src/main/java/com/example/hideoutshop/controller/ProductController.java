@@ -1,14 +1,13 @@
 package com.example.hideoutshop.controller;
 
 import com.example.hideoutshop.config.JwtTokenProvider;
-import com.example.hideoutshop.repository.list.Product;
+import com.example.hideoutshop.repository.Option.Options;
+import com.example.hideoutshop.repository.Product.Product;
 import com.example.hideoutshop.service.ProductService;
-import io.jsonwebtoken.Jwt;
+import com.example.hideoutshop.web.dto.ProductDTO;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,19 +26,20 @@ public class ProductController {
 
     @ApiOperation("상품등록")
     @PostMapping(value = "/api/product/setting")
-    public String setting(@ModelAttribute Product product, MultipartFile file, @RequestHeader("Authorization") String accessToken) throws Exception {
+    public String setting(@ModelAttribute ProductDTO product, @ModelAttribute Options option, MultipartFile file, @RequestHeader("Authorization") String accessToken) throws Exception {
         String userid = null;
         Boolean isSuccess = false;
         if (accessToken.startsWith("Bearer")) {
             String Token = accessToken.replace("Bearer", " ");
             userid = jwtTokenProvider.getUserId(Token);
             System.out.println("아이디는 !!" + userid);
-             isSuccess = productService.save(product, file, userid);
+            System.out.println("상품저보 !!" + product.toString());
+            System.out.println("옵션 !!" + option);
+            System.out.println("file !!" + file);
+             isSuccess = productService.save(product, option, file, userid);
         }else{
              isSuccess = false;
         }
-
-
         return isSuccess ? "상품이 등록되었습니다." : "등록 실패하였습니다.";
     }
 
@@ -61,6 +61,11 @@ public class ProductController {
         return deleteBoard;
     }
 
+    @ApiOperation("상품 구매")
+    @PostMapping("/api/product/buy")
+    public String buy(){
 
+        return "작성중";
+    }
 
 }

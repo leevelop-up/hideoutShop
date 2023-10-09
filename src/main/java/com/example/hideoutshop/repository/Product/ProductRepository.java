@@ -1,4 +1,4 @@
-package com.example.hideoutshop.repository.list;
+package com.example.hideoutshop.repository.Product;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

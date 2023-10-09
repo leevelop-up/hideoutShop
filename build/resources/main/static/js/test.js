@@ -61,3 +61,25 @@ function logout(){
 function detail(no){
     location.replace("/detail");
 }
+
+
+
+$("#sendRequest").click(function() {
+    $.ajax({
+        url: "https://example.com/your_endpoint",
+        method: "GET",  // 또는 "POST"
+        headers: {
+            "Custom-Header": "HeaderValue",
+            "Another-Header": "AnotherValue",
+            "text": "your_text_value"  // Request Header에 "text" 값 추가
+        },
+        success: function(data) {
+            // 성공적으로 응답을 받았을 때 수행할 작업
+            console.log(data);
+        },
+        error: function(error) {
+            // 요청이 실패했을 때 수행할 작업
+            console.error(error);
+        }
+    });
+});

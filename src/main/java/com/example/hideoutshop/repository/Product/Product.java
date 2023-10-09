@@ -1,4 +1,4 @@
-package com.example.hideoutshop.repository.list;
+package com.example.hideoutshop.repository.Product;
 
 
 import lombok.*;
@@ -14,8 +14,6 @@ import javax.persistence.*;
 
 @Table(name = "product")
 public class Product {
-
-
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pd_no")
@@ -49,4 +47,5 @@ public class Product {
 
     @Column(name = "pd_writer")
     private String productWriter;
+
 }

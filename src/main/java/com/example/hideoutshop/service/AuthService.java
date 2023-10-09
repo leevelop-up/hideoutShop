@@ -75,8 +75,6 @@ public class AuthService {
                 });
     }
 
-
-
     public ResponseEntity<?> login(UserRequestDto.Login login, HttpServletResponse httpServletResponse) {
         String userid = login.getUserid();
         String password = login.getPassword();
@@ -84,7 +82,6 @@ public class AuthService {
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(userid,password)
-
             );
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -92,6 +89,7 @@ public class AuthService {
             memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
 
+            //TODO:토큰 비교후 아이디 추출하는 함수 하나로 만들기
             UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
             httpServletResponse.addHeader("Authorization","Bearer "+tokenInfo.getAccessToken());
 
@@ -118,4 +116,7 @@ public class AuthService {
         }
 
     }
+
+
+
 } // End class
