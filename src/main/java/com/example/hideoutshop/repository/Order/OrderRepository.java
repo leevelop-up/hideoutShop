@@ -1,7 +1,9 @@
 package com.example.hideoutshop.repository.Order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OrderRepository extends JpaRepository<Integer,Order> {
+@Repository
+public interface OrderRepository extends JpaRepository<Order,Integer> {
 
 }

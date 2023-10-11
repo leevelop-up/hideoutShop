@@ -45,4 +45,10 @@ public class HtmlController {
         return "mylist";
     }
 
+    @ApiOperation("내 상품 구매")
+    @GetMapping("/order")
+    public String order(){
+        return "order";
+    }
+
 }
