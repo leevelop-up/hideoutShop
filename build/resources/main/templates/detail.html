@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>상품상세</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/css/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h2>상품상세</h2>
+    <p class="lead"></p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">구매 정보</span>
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">가격</h6>
+            <small class="text-muted"></small>
+          </div>
+          <span class="text-muted">$12</span>
+        </li>
+        <li class="list-group-item justify-content-between lh-condensed">
+          <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submit()">장바구니</button><br>
+          <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submit()">바로구매</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">상품 상</h4>
+      <div class="needs-validation" novalidate>
+
+        <div class="row">
+          <div class="col-md-8 mb-3">
+            <img src="/files/6299ea5e-dd14-4f0d-881c-bc3ddb9833d3_redheart.png" style="width:80%; height:80%;">
+          </div>
+
+          <div class="col-md-5 mb-3">
+            <label for="option">옵션</label>
+            <select class="custom-select d-block w-100" id="option" name="option" required>
+              <option value="">옵션을 선택하세요</option>
+              <option>노랑</option>
+              <option>파랑</option>
+              <option>초록</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">상품 수</label>
+            <input type="text" class="form-control" id="zip" value="1" placeholder="">
+            <div class="invalid-feedback">
+              Zip code required.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <!--상품 상세 설명-->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="">
+              상품 상세 리스트
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2018 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+
+<script>
+  function submit(){
+    const userid = $("#id").val();
+    const email = $("#email").val();
+    const password = $("#pw").val();
+    const formdata = {userid:userid,password:password,email:email}
+    $.ajax({
+      url: '/api/signup',
+      type: 'POST',
+      data: JSON.stringify(formdata),
+      contentType : 'application/json; charset=utf-8',
+      dataType: 'html',
+      success : function(data,text,request) {
+        alert(data);
+        location.replace("/login");
+      },
+      error: function(request, textStatus, errorThrown){
+        alert("회원가입에 실패했습니다.");
+      }
+    });
+
+  }
+</script>
+</body>
+</html>
