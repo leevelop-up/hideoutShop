@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderListDto {
 
-    private String ProductNo;
-    private Integer Ea;
+    private Integer productno;
+    private Integer ea;
 
 
 }

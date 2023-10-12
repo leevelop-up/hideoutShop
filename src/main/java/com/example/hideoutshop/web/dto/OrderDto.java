@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderDto {
-
+    private Integer orderStateNo;
+    private String orderStateId;
     private List<OrderListDto> orderList;
 }

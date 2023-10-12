@@ -7,12 +7,14 @@
 </head>
 <body>
 <form name="orderForm" id="orderForm">
-    <input type="text" name="orderList[0].ProductNo" value="1234">
-    <input type="text" name="orderList[0].Ea" value="1">
-    <input type="text" name="orderList[1].ProductNo" value="4444">
-    <input type="text" name="orderList[1].Ea" value="2">
-    <input type="text" name="orderList[2].ProductNo" value="5555">
-    <input type="text" name="orderList[2].Ea" value="3">
+    <input type="text" name="orderStateNo" value="1111">
+    <input type="text" name="price" value="10000">
+    <input type="text" class="orderListItem" name="orderList[0].ProductNo" value="1234">
+    <input type="text" class="orderListItem" name="orderList[0].Ea" value="1">
+    <input type="text" class="orderListItem" name="orderList[1].ProductNo" value="4444">
+    <input type="text" class="orderListItem" name="orderList[1].Ea" value="2">
+    <input type="text" class="orderListItem" name="orderList[2].ProductNo" value="5555">
+    <input type="text" class="orderListItem" name="orderList[2].Ea" value="3">
 
     <button type="button" onclick="orderInsert()">주문하기</button>
 </form>
@@ -22,26 +24,33 @@
 <script>
 
     function orderInsert(){
+        var data = {
+            orderStateNo: $("input[name='orderStateNo']").val(),
+            price: $("input[name='price']").val(),
+            orderList: []
+        };
 
-        let formObj = $("form[name='orderForm']").serializeArray();
-        let orderList = []; // 데이터를 담을 배열 생성
-        $.each(formObj, function(index, item) {
-            let obj = {};
-            obj[item.name] = item.value;
-            orderList.push(obj);
+        // 모든 항목을 수집하여 data.orderList 배열에 추가
+        $(".orderListItem").each(function (index) {
+            var productNo = $("input[name='orderList[" + index + "].ProductNo']").val();
+            var ea = $("input[name='orderList[" + index + "].Ea']").val();
+            if(productNo && ea){
+                data.orderList.push({ productno: productNo, ea: ea });
+            }
         });
-        console.log(orderList);
+        console.log(data);
         // 요청 보내기
         $.ajax({
             url: '/api/order',
             type: 'POST',
-            data: JSON.stringify(formObj), // JSON 배열로 변환하여 보내기
+            data: JSON.stringify(data), // JSON 배열로 변환하여 보내기
             headers: {
                 "Authorization": localStorage.getItem("Authorization")
             },
                 contentType : 'application/json',
                 processData: false,
                 success : function(data,text,request) {
+                alert("구매완료 되었습니다.");
                 location.replace("/home");
             },
                 error: function(request, textStatus, errorThrown){

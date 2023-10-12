@@ -19,6 +19,9 @@ public class OrderList{
     @Column(name = "order_list_no")
     private Integer OrderListNo;
 
+    @Column(name = "orderstateno")
+    private Integer OrderStateNo;
+
     @Column(name = "product_no")
     private Integer ProductNo;
     @Column(name = "product_name")
@@ -29,6 +32,6 @@ public class OrderList{
     @Column(name = "option_no")
     private Integer OptionNo;
     @Column(name = "reg_date")
-    private LocalDateTime localDateTime;
+    private LocalDateTime orderDate;
 
 }
