@@ -37,11 +37,13 @@
           <span class="text-muted">$12</span>
         </li>
         <li class="list-group-item justify-content-between lh-condensed">
-          <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submit()">장바구니</button><br>
+          <button class="btn btn-primary btn-lg btn-block" type="button" onclick="basketInsert()">장바구니</button><br>
           <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submit()">바로구매</button>
         </li>
       </ul>
     </div>
+
+    <inut type="text" name="" value=""></inut>
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">상품 상</h4>
       <div class="needs-validation" novalidate>
@@ -59,16 +61,12 @@
               <option>파랑</option>
               <option>초록</option>
             </select>
-            <div class="invalid-feedback">
-              Please select a valid country.
-            </div>
+
           </div>
           <div class="col-md-3 mb-3">
             <label for="zip">상품 수</label>
             <input type="text" class="form-control" id="zip" value="1" placeholder="">
-            <div class="invalid-feedback">
-              Zip code required.
-            </div>
+
           </div>
         </div>
         <hr class="mb-4">
@@ -97,26 +95,40 @@
 </div>
 
 <script>
-  function submit(){
-    const userid = $("#id").val();
-    const email = $("#email").val();
-    const password = $("#pw").val();
-    const formdata = {userid:userid,password:password,email:email}
-    $.ajax({
-      url: '/api/signup',
-      type: 'POST',
-      data: JSON.stringify(formdata),
-      contentType : 'application/json; charset=utf-8',
-      dataType: 'html',
-      success : function(data,text,request) {
-        alert(data);
-        location.replace("/login");
-      },
-      error: function(request, textStatus, errorThrown){
-        alert("회원가입에 실패했습니다.");
+  function basketInsert(){
+    var data = {
+      orderStateNo: $("input[name='orderStateNo']").val(),
+      price: $("input[name='price']").val(),
+      orderList: []
+    };
+
+    // 모든 항목을 수집하여 data.orderList 배열에 추가
+    $(".orderListItem").each(function (index) {
+      var productNo = $("input[name='orderList[" + index + "].ProductNo']").val();
+      var ea = $("input[name='orderList[" + index + "].Ea']").val();
+      if(productNo && ea){
+        data.orderList.push({ productno: productNo, ea: ea });
       }
     });
-
+    console.log(data);
+    // 요청 보내기
+    $.ajax({
+      url: '/api/order',
+      type: 'POST',
+      data: JSON.stringify(data), // JSON 배열로 변환하여 보내기
+      headers: {
+        "Authorization": localStorage.getItem("Authorization")
+      },
+      contentType : 'application/json',
+      processData: false,
+      success : function(data,text,request) {
+        alert("구매완료 되었습니다.");
+        location.replace("/home");
+      },
+      error: function(request, textStatus, errorThrown){
+        alert("등록실패 하였습니다.");
+      }
+    });
   }
 </script>
 </body>
