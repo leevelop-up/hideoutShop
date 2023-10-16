@@ -89,12 +89,12 @@ public class AuthService {
             memberRepository.findByUserId(userid)
                     .orElseThrow(()->new NotFoundException("user가 없습니다."));
 
-            //TODO:토큰 비교후 아이디 추출하는 함수 하나로 만들기
+            //TODO:토큰 비교후 아이디 추출 하는 함수 하나로 만들기
             UserResponseDto.TokenInfo tokenInfo = jwtTokenProvider.createToken(authentication);
             httpServletResponse.addHeader("Authorization","Bearer "+tokenInfo.getAccessToken());
 
-            redisTemplate.opsForValue()
-                    .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);
+//            redisTemplate.opsForValue()
+//                    .set("RT:" + authentication.getName(), tokenInfo.getRefreshToken(), tokenInfo.getRefreshTokenExpirationTime(), TimeUnit.MILLISECONDS);
             return response.success(tokenInfo, "로그인에 성공했습니다.", HttpStatus.OK);
 
         }catch (Exception e){
