@@ -89,4 +89,12 @@ public class ProductService {
         productRepository.deleteById(ProductNo);
         return status;
     }
+
+    public List<Product> searchProducts(String keyword) {
+
+        List<Product> searchResult = productRepository.findByProductNameContaining(keyword);
+
+        return searchResult;
+
+    }
 }

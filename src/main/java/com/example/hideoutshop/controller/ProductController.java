@@ -52,6 +52,18 @@ public class ProductController {
         return productList;
     }
 
+    @ApiOperation("상품리스트 검색")
+    @GetMapping(value = "/product/search")
+    public List<Product> SearchList(@RequestParam("keyword") String keyword, Model model){
+        List<Product> productList = productService.searchProducts(keyword);
+
+        model.addAttribute("list",productList);
+        return productList;
+    }
+
+
+
+
     @ApiOperation("상품 삭제")
     @DeleteMapping("/api/product/delete/{id}")
     public String BoardDelete(@PathVariable Integer id){

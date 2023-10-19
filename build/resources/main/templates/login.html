@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="/css/main.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
     <title>로그인</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI%3A400%2C700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700"/>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/floating-labels/">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/signin.css" rel="stylesheet">
+    <link href="/styles/login.css" rel="stylesheet">
 </head>
-<body class="text-center">
-    <div class="form-signin">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="id" class="sr-only">Email address</label>
-        <input type="id" id="id" class="form-control" placeholder="ID" required autofocus>
-        <label for="pw" class="sr-only">Password</label>
-        <input type="password" id="pw" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <div class="checkbox mb-3">
-            <label>
-                <a href="/signin">회원가입</a>
-            </label>
-            <label>
-                <a href="/signin">아아디/비밀번호 찾기</a>
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="submit()">Sign in</button>
-    </div>
+<body>
+<div class="login-zpp">
+    <div class="divcontainer-Z7E">
+        <div class="divloginarea-hDS">
+            <div class="hide-out-Sgp">Hide Out</div>
+            <div class="divhasbutton-9r8">
+                <div class="item--7HA">이메일 주소</div>
 
-</body>
+                <div class="item--Ncc">
+                    <input type="input" id="id" class="item--Ncc" placeholder="ID" required>
+                </div>
+            </div>
+            <div class="divinputbox-DUc">
+                <div class="item--NcQ" >비밀번호</div>
+                <div class="input-h8t">
+                    <input type="password" id="pw" class="input-h8t" placeholder="Password" required>
+                </div>
+            </div>
+            <button class="link-3Ck" type="button" onclick="submit()">Sign in</button>
+            <div class="list-iJt">
+                <div class="item--eCY"><a href="/signin">이메일 가입</a></div>
+                <div class="item-YHv">
+                    <div class="pseudo-5Hr">
+                    </div>
+                    <div class="item--QL8">이메일 찾기</div>
+                </div>
+                <div class="item-7kL">
+                    <div class="pseudo-Gt8">
+                    </div>
+                    <div class="item--odA">비밀번호 찾기</div>
+                </div>
+            </div>
+            <div class="divsociallogin-ugC">
+                <div class="button-fvG">
+                    <div class="svg-oFn">
+                    </div>
+                    <div class="naver--M2Q">Naver 로그인</div>
+                </div>
+                <div class="button-pwa">
+                    <div class="svg-AVe">
+                    </div>
+                    <div class="kakao--tgY">Kakao 로그인</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
     function submit(){
@@ -65,4 +87,5 @@
         });
     }
 </script>
-</html>
+
+</body>

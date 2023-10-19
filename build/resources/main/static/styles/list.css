@@ -1,0 +1,1219 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 39rem;
+}.list-VvY {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.list-VvY .divgnb-eoS {
+  width: 100%;
+  height: 6rem;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.list-VvY .divgnb-eoS .divheader-owE {
+  box-sizing: border-box;
+  padding: 0.8rem 1.5rem 0.8rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.list-VvY .divgnb-eoS .divheader-owE .divsearch-kba {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 0.8rem;
+}
+.list-VvY .divgnb-eoS .divheader-owE .divsearch-kba .div-7BE {
+  margin: 0.35rem 24.3rem 0.25rem 0rem;
+  width: 6.3rem;
+  height: calc(100% - 0.6rem);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 1.3945rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.list-VvY .divgnb-eoS .divheader-owE .divsearch-kba .auto-group-bwyg-AvC {
+  width: 3.3rem;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divgnb-eoS .divheader-owE .divsearch-kba .auto-group-bwyg-AvC .svg-veU {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.2rem;
+  overflow: hidden;
+}
+.list-VvY .divgnb-eoS .divheader-owE .divsearch-kba .auto-group-bwyg-AvC .svg-s3v {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.list-VvY .divshopmobile-B4c {
+  margin-bottom: 2541.55rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr {
+  width: 100%;
+  height: 5.6rem;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z {
+  box-sizing: border-box;
+  padding: 1.2rem 0rem 1.2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  column-gap: 0.8rem;
+  align-items: center;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .link-nKJ {
+  box-sizing: border-box;
+  padding: 0.75rem 2.941rem 0.75rem 1.3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #ebebeb;
+  border-radius: 3rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .link-nKJ .svg-vAc {
+  margin: 0.3rem 0.25rem 0rem 0rem;
+  width: 1rem;
+  height: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .link-nKJ .item--eMW {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divdivider-8nU {
+  width: 0.1rem;
+  height: 2rem;
+  background-color: #ebebeb;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk {
+  height: 100%;
+  display: flex;
+  column-gap: 0.6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-2sr {
+  box-sizing: border-box;
+  padding: 0.75rem 1.301rem 0.75rem 2.131rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #ebebeb;
+  border-radius: 3rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-2sr .item--maY {
+  margin-right: 1.0095rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-2sr .svg-Yzc {
+  margin: 0.4rem 0rem 0.3rem 0rem;
+  width: 1rem;
+  height: calc(100% - 0.7rem);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-f3e {
+  box-sizing: border-box;
+  padding: 0.8rem 1.3rem 0.7rem 1.75rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #ebebeb;
+  border-radius: 3rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-f3e .item--QG8 {
+  margin-right: 0.601rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3234rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-f3e .svg-X5r {
+  margin: 0.35rem 0;
+  width: 1rem;
+  height: calc(100% - 0.7rem);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-SyW {
+  box-sizing: border-box;
+  padding: 0.75rem 1.3rem 0.75rem 1.926rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #ebebeb;
+  border-radius: 3rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-SyW .item--CBz {
+  margin-right: 0.8055rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-SyW .svg-WyN {
+  margin: 0.4rem 0rem 0.3rem 0rem;
+  width: 1rem;
+  height: calc(100% - 0.7rem);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .divmwsearchfilters-7yr .divsearchfilterbuttons-59z .divfilterchipbuttons-tWk .button-qEx {
+  width: 7.431rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #ebebeb;
+  box-sizing: border-box;
+  border-radius: 3rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ {
+  box-sizing: border-box;
+  padding: 5.1rem 1.15rem 7.35rem 1.6rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .divshopcounts-E2C {
+  margin: 0rem 0.35rem 5.6rem 0rem;
+  width: calc(100% - 0.35rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .divshopcounts-E2C .item-476-xTz {
+  margin-right: 27.574rem;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .divshopcounts-E2C .button-sax {
+  margin-top: 0.1rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .divshopcounts-E2C .button-sax .item--da8 {
+  margin-right: 0.726rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2289rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.8000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .divshopcounts-E2C .button-sax .pseudo-margin-Ywz {
+  margin-bottom: 0.1rem;
+  width: 1.4rem;
+  height: 1.2rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn {
+  margin-bottom: 5.95rem;
+  width: 100%;
+  height: 29.35rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG {
+  margin-right: 1.75rem;
+  width: 17.25rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .divproduct-vxY {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .divproduct-vxY .a1028d58bfa3142c9928b2866adacc803jpg-5aY {
+  width: 17.25rem;
+  height: 17.25rem;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url('../assets/a1028d58bfa3142c9928b2866adacc803jpg-son.png');
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi {
+  box-sizing: border-box;
+  padding: 0.8rem 0.4rem 0rem 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe {
+  margin-bottom: 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe .nike-2PJ {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.2492rem;
+  font-weight: 700;
+  line-height: 1.2808005003;
+  letter-spacing: -0.007rem;
+  color: #333333;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe .divproductinfoproductname-KtC {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe .divproductinfoproductname-KtC .pname-Um6 {
+  margin-bottom: 0.2rem;
+  width: 14.9rem;
+  height: 3.2rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe .divproductinfoproductname-KtC .pname-Um6 .nike-windrunner-canvas-ja-cket-smoke-grey-asia-2Gp {
+  max-width: 14.9rem;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2307692308;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divtitle-foe .divproductinfoproductname-KtC .ptranslatedname-wPn {
+  width: 11.6rem;
+  height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divprice-ENt {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divprice-ENt .item-87000-zN4 {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2142857143;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-bvG .auto-group-t95a-8oi .divprice-ENt .item--JNk {
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C {
+  width: 17.25rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .divproduct-N7i {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .divproduct-N7i .a1028d58bfa3142c9928b2866adacc803jpg-vf2 {
+  width: 17.25rem;
+  height: 17.25rem;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url('../assets/a1028d58bfa3142c9928b2866adacc803jpg-ofn.png');
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk {
+  box-sizing: border-box;
+  padding: 0.8rem 0.4rem 0rem 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp {
+  margin-bottom: 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp .nike-iKz {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.2492rem;
+  font-weight: 700;
+  line-height: 1.2808005003;
+  letter-spacing: -0.007rem;
+  color: #333333;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp .divproductinfoproductname-2Lg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp .divproductinfoproductname-2Lg .pname-y12 {
+  margin-bottom: 0.2rem;
+  width: 14.9rem;
+  height: 3.2rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp .divproductinfoproductname-2Lg .pname-y12 .nike-windrunner-canvas-ja-cket-smoke-grey-asia-ufN {
+  max-width: 14.9rem;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2307692308;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divtitle-xLp .divproductinfoproductname-2Lg .ptranslatedname-dLU {
+  width: 11.6rem;
+  height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divprice-7WY {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divprice-7WY .item-87000-HA8 {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2142857143;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-l3hs-HPn .link-p6C .auto-group-3c7a-cnk .divprice-7WY .item--oeG {
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U {
+  width: 100%;
+  height: 29.35rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr {
+  margin-right: 1.75rem;
+  width: 17.25rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .divproduct-Dhz {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .divproduct-Dhz .a1028d58bfa3142c9928b2866adacc803jpg-PcU {
+  width: 17.25rem;
+  height: 17.25rem;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url('../assets/a1028d58bfa3142c9928b2866adacc803jpg-Fe8.png');
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE {
+  box-sizing: border-box;
+  padding: 0.8rem 0.4rem 0rem 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 {
+  margin-bottom: 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 .nike-BHS {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.2492rem;
+  font-weight: 700;
+  line-height: 1.2808005003;
+  letter-spacing: -0.007rem;
+  color: #333333;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 .divproductinfoproductname-hFn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 .divproductinfoproductname-hFn .pname-FYC {
+  margin-bottom: 0.2rem;
+  width: 14.9rem;
+  height: 3.2rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 .divproductinfoproductname-hFn .pname-FYC .nike-windrunner-canvas-ja-cket-smoke-grey-asia-zVn {
+  max-width: 14.9rem;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2307692308;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divtitle-Rp4 .divproductinfoproductname-hFn .ptranslatedname-iRn {
+  width: 11.6rem;
+  height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divprice-R5J {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divprice-R5J .item-87000-B4U {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2142857143;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-GXr .auto-group-irds-tZE .divprice-R5J .item--6hE {
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 {
+  width: 17.25rem;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .divproduct-NPr {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .divproduct-NPr .a1028d58bfa3142c9928b2866adacc803jpg-Lba {
+  width: 17.25rem;
+  height: 17.25rem;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url('../assets/a1028d58bfa3142c9928b2866adacc803jpg.png');
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx {
+  box-sizing: border-box;
+  padding: 0.8rem 0.4rem 0rem 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA {
+  margin-bottom: 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA .nike-LV6 {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.2492rem;
+  font-weight: 700;
+  line-height: 1.2808005003;
+  letter-spacing: -0.007rem;
+  color: #333333;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA .divproductinfoproductname-fnG {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA .divproductinfoproductname-fnG .pname-E4g {
+  margin-bottom: 0.2rem;
+  width: 14.9rem;
+  height: 3.2rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA .divproductinfoproductname-fnG .pname-E4g .nike-windrunner-canvas-ja-cket-smoke-grey-asia-yHA {
+  max-width: 14.9rem;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2307692308;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divtitle-NoA .divproductinfoproductname-fnG .ptranslatedname-VWQ {
+  width: 11.6rem;
+  height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divprice-Bu2 {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divprice-Bu2 .item-87000-MYc {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2142857143;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divshopmobile-B4c .auto-group-6d6y-VqJ .auto-group-pkaq-X4U .link-DG4 .auto-group-26yn-Egx .divprice-Bu2 .item--gat {
+  display: flex;
+  font-size: 1.0313rem;
+  font-weight: 400;
+  line-height: 1.2606060606;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg {
+  box-sizing: border-box;
+  padding: 4rem 1.6rem 3.9rem 1.6rem;
+  width: 100%;
+  height: 74rem;
+  border: solid 0.1rem #ebebeb;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC {
+  box-sizing: border-box;
+  padding-bottom: 5.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #ebebeb;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i {
+  margin-bottom: 5.15rem;
+  width: 19.9rem;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .strong-nnL {
+  margin: 0rem 6.731rem 0.7rem 0rem;
+  width: calc(100% - 6.731rem);
+  display: flex;
+  align-items: center;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .strong-nnL .item--vde {
+  margin: 0.1rem 2.269rem 0rem 0rem;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.016rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .strong-nnL .link-1588-7813-RaQ {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .item-11-00-18-00-13-00-14-00-kcg {
+  max-width: 19.9rem;
+  display: flex;
+  font-size: 1.2594rem;
+  font-weight: 400;
+  line-height: 1.58808933;
+  letter-spacing: -0.007rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .auto-group-byjn-mng {
+  box-sizing: border-box;
+  padding-top: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .auto-group-byjn-mng .item-1-1--KJQ {
+  margin-bottom: 1.6rem;
+  display: flex;
+  font-size: 1.2086rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.007rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divcustomerservice-F1i .auto-group-byjn-mng .link-nxg {
+  width: 9.5rem;
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1063rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.006rem;
+  color: #fafafa;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #222222;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 {
+  margin-right: 11.1rem;
+  width: calc(100% - 11.1rem);
+  height: 14.45rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME {
+  margin-right: 11.6rem;
+  width: 7.3rem;
+  height: 100%;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .strong--Zrx {
+  margin-bottom: 1.65rem;
+  display: flex;
+  font-size: 1.4063rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.015rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv .auto-group-qknk-Sfr {
+  box-sizing: border-box;
+  padding-bottom: 1.4rem;
+  width: 100%;
+  row-gap: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv .auto-group-qknk-Sfr .link--my2 {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv .auto-group-qknk-Sfr .link--tXr {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv .auto-group-qknk-Sfr .link--bSG {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-2ME .list-Uyv .link--JrU {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe {
+  width: 5.8rem;
+  height: 100%;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .strong--xw2 {
+  margin-bottom: 1.65rem;
+  display: flex;
+  font-size: 1.4063rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.015rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU .auto-group-zk1n-eJ4 {
+  box-sizing: border-box;
+  padding-bottom: 1.4rem;
+  width: 100%;
+  row-gap: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU .auto-group-zk1n-eJ4 .link--nQG {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU .auto-group-zk1n-eJ4 .link--WLG {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU .auto-group-zk1n-eJ4 .link--2ZW {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .divservicearea-gzC .divfootermenu-tF2 .divmenubox-DTe .list-UeU .link--wgU {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: rgba(34, 34, 34, 0.5);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 {
+  box-sizing: border-box;
+  padding-top: 3.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr {
+  margin: 0rem 0.011rem 2rem 0rem;
+  width: calc(100% - 0.0115rem);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .list-XPn {
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .list-XPn .item--5AQ {
+  margin-right: 2.856rem;
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .list-XPn .item--nqW {
+  margin-right: 2.856rem;
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .list-XPn .item--hSg {
+  margin-right: 2.856rem;
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .list-XPn .item--cJk {
+  display: flex;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  letter-spacing: -0.021rem;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 {
+  width: 100%;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .divsnsbox-ULx {
+  margin-right: 17.947rem;
+  height: 100%;
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .divsnsbox-ULx .link-svg-1rg {
+  width: 2.4rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .divsnsbox-ULx .link-svg-ADn {
+  width: 2.4rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .divsnsbox-ULx .link-svg-7Pv {
+  width: 2.4rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .button-rsJ {
+  margin: 0.3rem 0rem 0.4rem 0rem;
+  height: calc(100% - 0.7rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .button-rsJ .item--CRN {
+  margin-right: 0.8415rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2898rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  letter-spacing: -0.007rem;
+  color: #222222;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divcorporationarea-zPr .divfootersns-KU4 .button-rsJ .svg-7YL {
+  width: 1.6rem;
+  height: 1.6rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divnoticearea-Ts6 {
+  width: 24.7rem;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divnoticearea-Ts6 .item--RJ8 {
+  margin-bottom: 4.9rem;
+  max-width: 24.7rem;
+  display: flex;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4222222222;
+  letter-spacing: -0.006rem;
+  color: rgba(34, 34, 34, 0.400000006);
+  font-family: Segoe UI, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.list-VvY .divfooter-zLg .divinner-XbW .auto-group-zbqc-e56 .divnoticearea-Ts6 .kream-corp-ZSG {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: rgba(34, 34, 34, 0.3000000119);
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}

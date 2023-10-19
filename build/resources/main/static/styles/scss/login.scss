@@ -1,0 +1,291 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 39rem;
+}.login-zpp {
+  width: 100%;
+  height: 67.9rem;
+
+  .divcontainer-Z7E {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 6.95rem 1.6rem 9.5rem 1.6rem;
+    width: 100%;
+    height: 100%;
+    border: solid 0.1rem #000000;
+
+    .divloginarea-hDS {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+
+      .hide-out-Sgp {
+        font-family: Segoe UI, 'Source Sans Pro';
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        color: #000000;
+        flex-shrink: 0;
+        margin-bottom: 6.35rem;
+        align-items: center;
+        font-size: 3.2rem;
+        line-height: 1.2575;
+      }
+      .divhasbutton-9r8 {
+        margin-bottom: 2.4rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+
+        .item--7HA {
+          display: flex;
+          font-size: 1.2086rem;
+          letter-spacing: -0.007rem;
+          color: #000000;
+          font-family: Segoe UI, 'Source Sans Pro';
+          white-space: nowrap;
+          flex-shrink: 0;
+          font-weight: 700;
+          line-height: 1.4893341952;
+        }
+        .input-cUp {
+          flex-shrink: 0;
+          box-sizing: border-box;
+          padding: 0.9rem 0rem 1rem 0rem;
+          width: 100%;
+          height: 3.8rem;
+          border: solid 0.1rem #ebebeb;
+
+          .divplaceholder-9je {
+            font-weight: 400;
+            justify-content: center;
+            display: flex;
+            font-family: Segoe UI, 'Source Sans Pro';
+            white-space: nowrap;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 1.2575;
+            margin-right: 19.9rem;
+            width: 15.9rem;
+            letter-spacing: -0.015rem;
+            color: rgba(0, 0, 0, 0.3000000119);
+            align-items: center;
+          }
+        }
+      }
+      .divinputbox-DUc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        margin-bottom: 3.4rem;
+
+        .item--NcQ {
+          font-family: Segoe UI, 'Source Sans Pro';
+          flex-shrink: 0;
+          font-weight: 700;
+          line-height: 1.4769230769;
+          letter-spacing: -0.007rem;
+          white-space: nowrap;
+          display: flex;
+          font-size: 1.2188rem;
+          color: #000000;
+        }
+        .input-h8t {
+          height: 3.8rem;
+          border: solid 0.1rem #ebebeb;
+          box-sizing: border-box;
+          flex-shrink: 0;
+          width: 100%;
+        }
+      }
+      .link-3Ck {
+        flex-shrink: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        font-family: Segoe UI, 'Source Sans Pro';
+        white-space: nowrap;
+        background-color: #ebebeb;
+        line-height: 1.2575;
+        letter-spacing: -0.016rem;
+        color: #ffffff;
+        border-radius: 1.2rem;
+        height: 5.2rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .list-iJt {
+        width: calc(100% - 7.811rem);
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        margin: 0rem 5.016rem 3.95rem 2.795rem;
+
+        .item--eCY {
+          font-weight: 400;
+          letter-spacing: -0.007rem;
+          white-space: nowrap;
+          flex-shrink: 0;
+          display: flex;
+          font-size: 1.2188rem;
+          color: #000000;
+          font-family: Segoe UI, 'Source Sans Pro';
+          margin: 0rem 4.699rem 0.05rem 0rem;
+          line-height: 1.2575;
+        }
+        .item-YHv {
+          margin: 0.05rem 4.698rem 0rem 0rem;
+          height: 1.6rem;
+          display: flex;
+          align-items: flex-end;
+          flex-shrink: 0;
+
+          .pseudo-5Hr {
+            background-color: #d3d3d3;
+            flex-shrink: 0;
+            margin: 0rem 2.796rem 0.05rem 0rem;
+            width: 0.1rem;
+            height: 1.3rem;
+          }
+          .item--QL8 {
+            display: flex;
+            font-size: 1.2188rem;
+            line-height: 1.2575;
+            font-weight: 400;
+            letter-spacing: -0.007rem;
+            color: #000000;
+            font-family: Segoe UI, 'Source Sans Pro';
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+        }
+        .item-7kL {
+          margin-top: 0.05rem;
+          height: 1.6rem;
+          display: flex;
+          align-items: flex-end;
+          flex-shrink: 0;
+
+          .pseudo-Gt8 {
+            margin: 0rem 2.795rem 0.05rem 0rem;
+            width: 0.1rem;
+            height: 1.3rem;
+            background-color: #d3d3d3;
+            flex-shrink: 0;
+          }
+          .item--odA {
+            font-weight: 400;
+            font-family: Segoe UI, 'Source Sans Pro';
+            font-size: 1.2188rem;
+            line-height: 1.2575;
+            letter-spacing: -0.007rem;
+            color: #000000;
+            white-space: nowrap;
+            flex-shrink: 0;
+            display: flex;
+          }
+        }
+      }
+      .divsociallogin-ugC {
+        flex-shrink: 0;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .button-fvG {
+          box-sizing: border-box;
+          padding: 1.4rem 14.44rem 1.4rem 1.6rem;
+          width: 100%;
+          height: 5.2rem;
+          border: solid 0.1rem #ebebeb;
+          flex-shrink: 0;
+          margin-bottom: 0.8rem;
+          display: flex;
+          align-items: center;
+          background-color: #ffffff;
+          border-radius: 1.2rem;
+
+          .svg-oFn {
+            margin-right: 10.46rem;
+            width: 2.4rem;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+          }
+          .naver--M2Q {
+            white-space: nowrap;
+            margin-top: 0.1rem;
+            align-items: center;
+            font-weight: 700;
+            letter-spacing: -0.016rem;
+            color: #000000;
+            font-family: Segoe UI, 'Source Sans Pro';
+            display: flex;
+            justify-content: center;
+            font-size: 1.4875rem;
+            line-height: 1.2575;
+            flex-shrink: 0;
+          }
+        }
+        .button-pwa {
+          border: solid 0.1rem #ebebeb;
+          border-radius: 1.2rem;
+          flex-shrink: 0;
+          box-sizing: border-box;
+          padding: 1.4rem 14.24rem 1.4rem 1.6rem;
+          display: flex;
+          background-color: #ffffff;
+          width: 100%;
+          height: 5.2rem;
+          align-items: center;
+
+          .svg-AVe {
+            position: relative;
+            flex-shrink: 0;
+            margin-right: 10.26rem;
+            width: 2.4rem;
+            height: 100%;
+            overflow: hidden;
+          }
+          .kakao--tgY {
+            display: flex;
+            justify-content: center;
+            letter-spacing: -0.016rem;
+            color: #000000;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+            align-items: center;
+            font-size: 1.525rem;
+            font-weight: 700;
+            line-height: 1.2575;
+            font-family: Segoe UI, 'Source Sans Pro';
+          }
+        }
+      }
+    }
+  }
+}
