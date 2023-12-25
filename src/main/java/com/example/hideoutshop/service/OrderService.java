@@ -42,7 +42,7 @@ public class OrderService {
         Order orderinfo = Order.builder()
                 .OrderStateAddress("경기도")
                 .OrderStateId(userid)
-                .OrderStateTel("010-4540-2969")
+                .OrderStateTel("010-4540-****")
                 .OrderStateName("이동현")
                 .OrderDate(LocalDateTime.now())
                 .build();
